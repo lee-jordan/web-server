@@ -1,5 +1,8 @@
 # Tools
-apt isntall nginx docker.io net-tools software-properties-common certbot python3-certbox-nginx docker-compose
+apt install nginx docker.io net-tools software-properties-common certbot python3-certbot-nginx docker-compose
+
+# Docker enable
+sudo systemctl enable --now docker
 
 # Setup
 rm /etc/nginx/sites-enabled/default

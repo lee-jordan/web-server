@@ -1,25 +1,34 @@
 # Tools
-apt install nginx docker.io net-tools software-properties-common certbot python3-certbot-nginx docker-compose
-
+```
+$ apt install nginx docker.io net-tools software-properties-common certbot python3-certbot-nginx docker-compose
+```
 # Docker enable
-sudo systemctl enable --now docker
-
+```
+$ sudo systemctl enable --now docker
+```
 # Setup
-rm /etc/nginx/sites-enabled/default
-
+```
+$ rm /etc/nginx/sites-enabled/default
+```
 # Docker
-docker network create <networkName>
-
+```
+$ docker network create <networkName>
+```
 # Ghost
-docker run -dit --network <networkName> ghost
+```
+$ docker run -dit --network <networkName> ghost
+```
 
 # Docker Inspect
-docker ps
-docker inspect <containerName>
+``` 
+$ docker ps
+$ docker inspect <containerName> 
+```
 
 # Nginx
-nano /etc/nginx/conf.d/domain.tld.conf
-
+```
+$ nano /etc/nginx/conf.d/domain.tld.conf
+```
 ```
 server {
     listen 80;
@@ -35,18 +44,21 @@ server {
 }
 ```
 
-nginx -t
-service nginx reload
-
+```
+$ nginx -t
+$ service nginx reload
+```
 # Certbot
-certbox --nginx
-
+```
+$ certbox --nginx
+```
 
 
 
 # Portainer
-docker run -d --network leejordan.dev --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-
+```
+$ docker run -d --network leejordan.dev --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+```
 ```
 server {
     listen 80;
@@ -61,6 +73,7 @@ server {
     }
 }
 ```
-
-service nginx reload
-certbox --nginx
+```
+$ service nginx reload
+$ certbox --nginx
+```

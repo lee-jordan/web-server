@@ -75,5 +75,5 @@ server {
 ```
 ```
 $ service nginx reload
-$ certbox --nginx
+$ certbot --nginx
 ```
